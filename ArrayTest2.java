@@ -14,6 +14,7 @@ public class ArrayTest2 {
         System.out.println("응시한 학생의 이름을 입력하시오");
         int number = sc.nextInt();
         int[] scores = new int[number];
+
         String[] names = new String[number];
         int max = 0;
         int namesIndex = 0;
