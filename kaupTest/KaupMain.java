@@ -11,7 +11,7 @@ public class KaupMain {
         double heightMeter = (height/100)*(height/100);
         double bmi =(weight/ heightMeter);
         System.out.println(bmi);
-
+kauo
 
         if (bmi < 10 ){
             System.out.printf("BMI지수는 %f 이고 저체중입니다",bmi);
