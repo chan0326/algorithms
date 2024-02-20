@@ -1,4 +1,4 @@
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class Dwarf {
@@ -11,44 +11,42 @@ public class Dwarf {
             arry1[i] = sc.nextInt();
             sum += arry1[i];
         }
-        int c =0;
+        int c;
+        for (int i = 0; i < 9; i++) {
+            for (int j = i; j < 9; j++) {
+                if (arry1[i] > arry1[j]) {
+                    c = arry1[i];
+                    arry1[i] = arry1[j];
+                    arry1[j] = c;
+                }
+            }
+        }
 
-        for (int j = 0; j < 8; j++) {
+
+        int a = 0;
+        int b = 0;
+
+        for (int j = 0; j < 9; j++) {
             for (int i = 1; i < 9; i++) {
-                if (sum - arry1[j] - arry1[i] == 100) {
-
-                    arry1[j] = 100;
-                    arry1[i] = 100;
+                if (sum - (arry1[j] + arry1[i]) == 100) {
+                    a = arry1[j];
+                    b = arry1[i];
                     break;
+
+
                 }
-
-
-
-
 
 
             }
         }
-        for (int a = 0; a < 8; a++) {
-            for (int b = 1; b < 9; b++) {
-                if (arry1[a] > arry1[b]) {
-                    arry1[c] = arry1[a];
-                    arry1[a] = arry1[b];
-                    arry1[b] = arry1[c];
-                }
+
+
+        for (int i = 0; i < arry1.length; i++) {
+            if (arry1[i] != a && arry1[i] != b) {
+                System.out.println(arry1[i]);
             }
-        }
-        for (int i = 0; i < 7; i++) {
-            System.out.println(arry1[i]);
         }
     }
 
 
 }
-
-
-
-
-
-
-

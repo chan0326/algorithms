@@ -37,6 +37,6 @@ public class Multidimension {
         avg2=avg2/scores2.length;
 
         System.out.printf("1반 평균점수: %d  최대점수: %d" ,avg, max);
-        System.out.printf("1반 평균점수: %d  최대점수: %d" ,avg2, max2);
+        System.out.printf("2반 평균점수: %d  최대점수: %d" ,avg2, max2);
     }
 }
