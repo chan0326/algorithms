@@ -16,7 +16,55 @@ public class MemberPerson {
     private String adress;
 
     private String job;
+    private double height;
+    private double weight;
 
+
+
+
+
+
+
+
+
+
+    public void creatHeight (){
+        this.height = Math.round((float) (Math.random()*50)+150.2);;
+
+    }
+
+    public  double getHeight ( ){
+        return  this.height;
+    }
+    public void creatWeight (){
+        this.weight = Math.round((float) (Math.random()*69)+30.2);;
+
+
+    }
+    public  double getWeight (){
+        return  this.weight;
+    }
+
+    //카우프 지수에서 사용하는 생성자
+    public MemberPerson(double height,double weight){
+        this.height =height;
+        this.weight =weight;
+    }
+
+
+    // 회원가입에서 사용하는 생성자
+    public MemberPerson(String id,String pw,String pwAgain,String name,
+                        String personID ,String phoneNumber ,String adress,String job){
+        this.id = id;
+        this.pw=pw;
+        this.pwAgain=pwAgain;
+        this.name=name;
+        this.personID=personID;
+        this.phoneNumber=phoneNumber;
+        this.adress=adress;
+        this.job=job;
+
+    }
     public void setId(String id){
         this.id = id;
     }
@@ -66,5 +114,19 @@ public class MemberPerson {
     }
     public String getJob(){
         return this.job;
+    }
+
+    @Override
+    public String toString() {
+        return "MemberPerson{" +
+                "id='" + id + '\'' +
+                ", pw='" + pw + '\'' +
+                ", pwAgain='" + pwAgain + '\'' +
+                ", name='" + name + '\'' +
+                ", personID='" + personID + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", adress='" + adress + '\'' +
+                ", job='" + job + '\'' +
+                '}';
     }
 }

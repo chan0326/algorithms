@@ -2,6 +2,8 @@ package gradeOOP;
 import java.util.Scanner;
 
 public class GradeView {
+
+    //static  String test; // 고정된 변수 =>말이 이상해서 상수라고 함
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("다음은 한 학생의 과목 점수이다.");
