@@ -10,36 +10,41 @@ public class Honeypicking {
         for (int i = 0; i < arry.length; i++) {
             arry[i] = sc.nextInt();
         }
-        int a=0;
-        int b=0;
+
         int max = 0;
         int max1 = 0;
         int max2 = 0;
-        int max3 = 0;
-        int max4 = 0;
-        int max5 = 0;
+
         int count = 0;
+        int count1 = 0;
+        int count2 = 0;
+        int arry3 [] =new int[arry.length*arry.length*arry.length];
+        int arry4 [] =new int[arry.length*arry.length*arry.length];
+        int arry5 [] =new int[arry.length*arry.length*arry.length];
 
 
         for (int j = 0; j < arry.length; j++) {
             for (int i = 0; i < arry.length; i++) {
                 for (int k = 0; k < arry.length; k++) {
                     if (j > i && k > j) {
-                        count++;
+                        max = 0;
                         for (int m = i + 1; m <= j; m++) {
                             max += arry[m];
                         }
                         for (int l = j; l < k; l++) {
                             max += arry[l];
                         }
+                        arry3[count] = max;
+
+                        count++;
 
 
-                        int arry3 [] =new int[count];
-                        System.out.println(max);
+
 
 
 
                     } else if (i > k && k > j) {
+                        max1 = 0;
                         for (int m = j; m < i; m++) {
                             max1 += arry[m];
                         }
@@ -47,8 +52,11 @@ public class Honeypicking {
                             max1 += arry[l];
                         }
                         max1 -= arry[k];
+                        arry4[count1] = max1;
+                        count1++;
 
                     } else if (j > k && k > i) {
+                        max2 =0;
                         for (int m = i + 1; m <= j; m++) {
                             max2 += arry[m];
                         }
@@ -56,27 +64,42 @@ public class Honeypicking {
                             max2 += arry[l];
                         }
                         max2 -= arry[k];
+                        arry5[count2] = max2;
+                        count2++;
                     }
 
 
                 }
             }
         }
+        int arry3Max =0;
+        int arry4Max =0;
+        int arry5Max =0;
+        for (int i = 0;i<arry3.length;i++){
+            if (arry3Max < arry3[i]){
+                arry3Max = arry3[i];
+            }
+        }
+        for (int i = 0;i<arry4.length;i++){
+            if (arry4Max < arry4[i]){
+                arry4Max = arry4[i];
+            }
+        }
+        for (int i = 0;i<arry5.length;i++){
+            if (arry5Max < arry5[i]){
+                arry5Max = arry5[i];
+            }
+        }
         int answer = 0;
-        int[] intarray = new int[]{max, max1, max2};
+        int[] intarray = new int[]{arry3Max, arry4Max, arry5Max};
         for (int i = 0; i < intarray.length; i++) {
             if (answer < intarray[i]) {
                 answer = intarray[i];
 
             }
         }
-//        System.out.println(max);
-//        System.out.println(max1);
-//        System.out.println(max2);
-//        System.out.println(max3);
-//        System.out.println(max4);
-//        System.out.println(max5);
-//        System.out.println(answer);
+
+        System.out.println(answer);
 
 
     }

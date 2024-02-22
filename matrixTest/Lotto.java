@@ -16,7 +16,7 @@ public class Lotto {
             boolean check = false;
             arry[i] = (int) (Math.random() * 45 + 1);
             for(int j=0;j< arry.length;j++) {
-                
+
 
                 if (arry[i] == arry[j] && i!=j) {
                     check = true;
