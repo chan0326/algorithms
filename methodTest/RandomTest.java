@@ -1,4 +1,4 @@
-package mathTest;
+package methodTest;
 
 public class RandomTest {
     static String returnRandom(String lastName){

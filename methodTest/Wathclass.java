@@ -1,4 +1,4 @@
-package mathTest;
+package methodTest;
 
 public class Wathclass {
     static int retrunname(){
