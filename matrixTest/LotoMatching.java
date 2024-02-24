@@ -20,7 +20,7 @@ public class LotoMatching {
         creatArrayNumber1();
         sortArry();
         sortArry();
-        printLoTTo(r);
+        printLoTTo();
         System.out.println();
         printLoTTo();
         System.out.println();
