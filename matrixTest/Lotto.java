@@ -18,12 +18,12 @@ public class Lotto {
         //4.
         //오름차순 정렬
         //-> 랜덤수 : Math 사용
-        int arry [] = new int[6];
-        int arryMine [] = new  int[6];
+        int[] arry = new int[6];
+        int[] arryMine = new  int[6];
          creatArrayNumber(arry);
          creatArrayNumber(arryMine);
-         sortArry(arry);
-         sortArry(arryMine);
+//         sortArry(arry);
+//         sortArry(arryMine);
         printLoTTo(arry);
         System.out.println();
         printLoTTo(arryMine);
@@ -58,7 +58,7 @@ public class Lotto {
 
     static int[] creatArrayNumber(int[] arry) {
         for (int i=0;i<arry.length;i++){
-            int randomNumber = creatRandomNumber(1,45);
+//            int randomNumber = creatRandomNumber(1,45);
             boolean check = false;
             arry[i] = (int) (Math.random() * 45 + 1);
             for(int j=0;j< arry.length;j++) {
