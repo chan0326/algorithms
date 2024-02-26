@@ -7,78 +7,103 @@ public class HoneyPicking2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int arry[] = new int[sc.nextInt()];
-        int arry2[] = new int[(arry.length-2)*(arry.length-3)];
+        int arry2[] = new int[(arry.length ) * (arry.length )];
+        int arry3[] = new int[(arry.length ) * (arry.length )];
+        int arry4[] = new int[(arry.length ) * (arry.length )];
         for (int i = 0; i < arry.length; i++) {
             arry[i] = sc.nextInt();
         }
-        int max=0;
 
         // 다시 생각해보자
 
 
         //꿀벌벌
-        for (int b1 =0;b1<arry.length;b1++) {
+        int max = 0;
+        int count=0;
+        for (int b1 = 0; b1 < arry.length-1; b1++) {
             max += arry[b1];
         }
+        int maxmax1= max;
+        System.out.println(max);
+
+        for (int b2=1;b2<arry.length-1;b2++){
+
+            for (int b3=0;b3<=b2;b3++){
+                maxmax1= max + arry[b3];
 
 
-        for ( int b2=0;b2< arry.length-1;b2++) {
-            max += arry[b2];
+
+            }
+            maxmax1-=(arry[b2]*2);
+            arry2[count]= maxmax1;
+            count++;
+
+
         }
-        for (int sum =0; sum<=b2;sum++) {
+
+
+
+        int max2 = 0;
+        int count2 =0;
+        //벌벌꿀
+        for (int b1 = 1; b1 < arry.length; b1++) {
+            max2 += arry[b1];
         }
-        ;
+        for (int b2=1;b2<arry.length;b2++){
+            max2 -=arry[b2];
+            for (int b3=1;b3<=b2;b3++){
+                max2 += arry[b3];
 
 
 
+            }
+             arry3[count2]= max2;
+            count2++;
 
-
-        int max2=0;
-           //벌벌꿀
-
-        for (int i=2;i<arry.length;i++){
-            max2 += arry[i];
         }
-        max2=max*2;
 
 
 
         // 벌 끌 벌
-        int count =0;
-        int max3=0;
-        for (int h =1;h< arry.length-1;h++) {
-            max3=0;
+        int count3 = 0;
+        int max3 = 0;
+        for (int i = 1; i < arry.length - 1; i++) {
+            max3 += arry[i];
+        }
 
-            for (int i = 1; i <arry.length-1; i++) {
-                max3 += arry[i];
+        int maxmax=0;
+        for (int h = 1; h < arry.length - 1; h++) {
 
-            }
-            max3+= arry[h];
-            arry2[count]=max3;
 
-            count++;
+            maxmax= max3 + arry[h];
+            arry4[count3] = maxmax;
+
+
+            count3++;
 
 
 
         }
+
         Arrays.sort(arry2);
-        max3 = arry2[arry2.length-1];
+        Arrays.sort(arry3);
+        Arrays.sort(arry4);
+
+        max = arry2[arry2.length - 1];
+        max2 = arry3[arry3.length - 1];
+        max3 = arry4[arry4.length - 1];
         System.out.println(max);
         System.out.println(max2);
         System.out.println(max3);
 
 
-
-
         int answer = 0;
-        int[] intarray = new int[]{max, max2, max3 };
+        int[] intarray = new int[]{max, max2, max3};
         Arrays.sort(intarray);
-        answer = intarray[intarray.length-1];
+        answer = intarray[intarray.length - 1];
 
 
         System.out.println(answer);
-
-
 
 
     }
