@@ -112,6 +112,10 @@ public class LotoMatching {
         return arry;
     }
 }
+class LottoDraw {
+
+
+}
 
 
 

@@ -2,7 +2,12 @@ package matrixTest;
 
 import java.util.Random;
 
+import java.util.Scanner;
+
+
+
 public class Lotto {
+
     public static void main(String[] args) {
 
 //        Random random = new Random();
@@ -18,12 +23,13 @@ public class Lotto {
         //4.
         //오름차순 정렬
         //-> 랜덤수 : Math 사용
+
         int[] arry = new int[6];
         int[] arryMine = new  int[6];
          creatArrayNumber(arry);
          creatArrayNumber(arryMine);
-//         sortArry(arry);
-//         sortArry(arryMine);
+         sortArry(arry);
+         sortArry(arryMine);
         printLoTTo(arry);
         System.out.println();
         printLoTTo(arryMine);
@@ -89,4 +95,32 @@ public class Lotto {
         Random random = new Random();
         return random.nextInt(end)+start;
     }
+
 }
+
+class  BuyLotto{
+    public static void Buylotto() {
+        Scanner sc = new Scanner(System.in);
+        int [] arryBuy = new int[6];
+        for (int i=0;i<7;i++){
+            arryBuy[i]=sc.nextInt();
+
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
