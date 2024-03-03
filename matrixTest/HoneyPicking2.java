@@ -18,6 +18,7 @@ public class HoneyPicking2 {
 
 
         //꿀벌벌
+        int max15 = 15;
         int max = 0;
         int count = 0;
         int maxmax3=0;
