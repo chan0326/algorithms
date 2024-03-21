@@ -1,3 +1,4 @@
+package matrixTest;
 
 import java.util.Scanner;
 

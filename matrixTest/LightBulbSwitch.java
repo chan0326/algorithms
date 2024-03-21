@@ -3,6 +3,9 @@ package matrixTest;
 import java.util.Scanner;
 
 public class LightBulbSwitch {
+    private static int countA =0;
+    private static int countB =0;
+
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         int N = sc.nextInt();
@@ -20,27 +23,43 @@ public class LightBulbSwitch {
         // 원본,정답입력받음
         answerarrya =inputarry;
         answerarryb =inputarry;
-        for (int i=0;i<N;i++){
-            if (answerarry[0]==0){
-                answerarrya[0]=1; // 바꾸기
-                answerarrya[1]=1;
-            }else {
-                answerarryb[0]=1; // 안바꾸기
-                answerarryb[1]=1;
+        if (answerarry[0]==inputarry[0] &&answerarry[1]==inputarry[1]){
+        }else if (answerarry[0]!=inputarry[0] && answerarry[1]==inputarry[1]){
+            changeNumber(answerarrya[1],answerarrya[1]);
+            changeNumber(answerarrya[0],answerarrya[0]);
 
-            }
-
-
-
+            countA++;
+        } else if (answerarry[0]!=inputarry[0] && answerarry[1]!=inputarry[1]) {
+            changeNumber(answerarrya[1],answerarrya[1]);
+            changeNumber(answerarrya[0],answerarrya[0]);
+            countA++;
+            changeNumber(answerarryb[1],answerarryb[1]);
+            changeNumber(answerarryb[0],answerarryb[0]);
+            countB++;
         }
 
 
-
-
-
-
-
     }
+    private static String standardNumber(int answer,int a){
+        if (answer==0){
+            a = 1;
+
+        }else
+            a= 0;
+
+        return null;
+    }
+    private static String changeNumber(int arry,int change){
+        if (arry==0){
+            change = 1;
+
+        }else
+            change = 0;
+
+        return null;
+    }
+
+
 
 
 
