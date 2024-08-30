@@ -32,6 +32,8 @@ public class SumOfEvenNumbers {
     public static void main(String[] args) {
         SumOfEvenNumbers sumOfEvenNumbers = new SumOfEvenNumbers();
 
+        
+
         int n = 10;
         System.out.println(sumOfEvenNumbers.solution(n));
         System.out.println(sumOfEvenNumbers.solution2(n));
