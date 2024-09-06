@@ -1,7 +1,15 @@
 package matrixTest;
 
+import java.util.Arrays;
+
 public class Height {
 
+    /**
+     * 키가 height보다 큰 사람의 수를 구하는 함수
+     * @param height
+     * @param array
+     * @return
+     */
     public int solution(int height, int [] array){
         int answer = 0;
         for (int i : array){
@@ -13,7 +21,14 @@ public class Height {
     }
 
 
+    /**
+     * 람다식을 사용한 방법
+     * @param height
+     * @param array
+     * @return
+     */
     public int solution2(int height, int [] array){
+
         return (int) java.util.Arrays.stream(array)
                 .filter(i -> i > height)
                 .count();
