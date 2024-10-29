@@ -1,4 +1,4 @@
-package matrixTest;
+package programmers.lv2;
 import java.util.*;
 /**
  *  LV 2. 최소값 구하기

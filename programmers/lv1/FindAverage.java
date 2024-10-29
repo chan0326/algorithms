@@ -1,4 +1,4 @@
-package matrixTest;
+package programmers.lv1;
 
 /**
  * programmers.lv1. 평균 구하기

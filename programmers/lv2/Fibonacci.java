@@ -1,4 +1,4 @@
-package matrixTest;
+package programmers.lv2;
 
 /**
  * LV 2. 피보나치 수

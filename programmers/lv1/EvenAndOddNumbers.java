@@ -1,4 +1,4 @@
-package matrixTest;
+package programmers.lv1;
 
 /**
  * LV 1. 짝수와 홀수
